@@ -1,0 +1,21 @@
+ $(document).ready(function(){
+      $('.deleteprod').click(function(){
+        
+        id = $(this).attr('for')
+        
+        objthis = $(this)
+        $.ajax({
+        		url: '../../ajax/deletefromadmin.php', 
+        		data: "id=" + id,                         
+        		type: 'post',
+        		success: function(response){    		
+        			setTimeout(function(){
+        				
+        				// $(this).parent().parent().hide(1000);
+        			},1000)
+        		}
+     		});
+        objthis.parent().parent().slideUp(1000);
+
+      })
+    })
