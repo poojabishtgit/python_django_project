@@ -5,6 +5,6 @@ from apps.index.views import index,register
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('/index',index),
-    path('/register',register)
+    path('',index),
+    path('register',register)
 ]
